@@ -62,10 +62,20 @@ class Cart
     {
         $this->socks[] = $socks;
     }
+
+    /**
+     * @return array
+     */
     public function getSocks(): array
     {
         return $this->socks;
     }
+
+    /**
+     * @param PaymentInterface $payment
+     * @param array $socks
+     * @return string
+     */
     public function payment(PaymentInterface $payment, array $socks): string
     {
         return $payment->payment();
