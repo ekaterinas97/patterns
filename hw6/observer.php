@@ -106,10 +106,12 @@ class Hunter2 implements ObserverInterface
 
 $h1 = new Hunter1('Иван');
 $h2 = new Hunter2('Николай');
+$h3 = new Hunter1('Петр');
 $vacancy = new Vacancy();
 
 $vacancy->attach($h1);
 $vacancy->attach($h2);
+$vacancy->attach($h3);
 $vacancy->setName('New vacancy');
 $vacancy->setName('PHP-programmer');
 $vacancy->detach($h1);
